@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Train Schedule</title>
+
+
+
+  <meta name="google-signin-client_id" content="167602757568-k6027cugtilquc0nh7oal29icsbs44ov.apps.googleusercontent.com">
+  <meta name="google-signin-cookiepolicy" content="single_host_origin">
+  <meta name="google-signin-scope" content="profile email">
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ 
+
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="jumbotron text-center">
+      
+        <h1>Schedule That Train <br/><small class="current-time"></small></h1>
+        
+        <button class="text-center btn btn-lg signIn">Sign In With Google To See Schedule</button>
+        
+      
+    </div>
+
+    <div class="row content">
+      <div class="col-sm-12 col-md-3">
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Add A Train</h3>
+          </div>
+          <div class="panel-body">
+          <span class="help-block">You must fill out all input fields!</span>
+            <form>
+              <div class="form-group">
+                <label for="trainName">Train Name</label>
+                <input type="text" class="form-control" id="trainName" placeholder="Train Name">
+              </div>
+              <div class="form-group">
+                <label for="trainDestination">Destination</label>
+                <input type="text" class="form-control" id="trainDestination" placeholder="Destination">
+              </div>
+              <div class="form-group">
+                <label for="firstTrain">First Train Time<br/><small>(HH:mm Military Time)</small></label>
+                <input type="text" class="form-control" id="firstTrain" placeholder="First Train Time">
+              </div>
+              <fieldset disabled>
+                <div class="form-group hidden">
+                  <label for="trainKey">Train Key</label>
+                  <input type="text" id="trainKey" class="form-control" placeholder="Disabled input">
+                </div>
+              </fieldset>
+              <div class="form-group">
+                <label for="trainFrequency">Frequency (min)</label>
+                <input type="text" class="form-control" id="trainFrequency" placeholder="Frequency">
+              </div>
+            
+              <button type="submit" class="btn submit">Submit</button>
+              <button type="reset" class="btn reset">Clear</button>
+            </form>
+            
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-9">
+        <div class="panel">
+          <div class="panel-heading">
+            <h3 class="panel-title">Train Schedule</h3>
+          </div>
+          <div class="panel-body table-responsive">
+            <table class="table">
+              <thead>
+                
+                <th class="text-center">Train</th>
+                <th class="text-center">Destination</th>
+                <th class="text-center">Frequency</th>
+                <th class="text-center">Next Arrival</th>
+                <th class="text-center">Minutes Away</th>
+                <th></th>
+              </thead>
+              
+              <tbody class="text-center">
+
+              </tbody>
+            
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script type="text/javascript" src="assets/javascript/script.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+</body>
+</html>
